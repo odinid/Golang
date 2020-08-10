@@ -8,6 +8,7 @@ import (
 func WordCount(s string) map[string]int {
 	m := make(map[string]int)
 	s = strings.ReplaceAll(s, ",", "")
+	s = strings.ReplaceAll(s, ".", "")
 
 	for _, a := range strings.Split(s, " ") {
 		v, ok := m[a]
